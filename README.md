@@ -49,5 +49,7 @@ output
 
 calculate 
 
+![WhatsApp Image 2025-11-05 at 21 42 11_1807ecb6](https://github.com/user-attachments/assets/ddf6c0d1-78e6-4aa0-8291-2db8e51a837c)
+
 Result 
    The message signal, carrier signal, and frequency modulated (FM) signal will be displayed in separate plots. The modulated signal will show frequency variations corresponding to the amplitude of the message signal.
