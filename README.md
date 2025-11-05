@@ -24,7 +24,7 @@ program
     import numpy as np
     import matplotlib.pyplot as plt
     Am = 4
-    Ac = 98
+    Ac = 9.8
     fm = 577
     fc = 5770
     fs = 57700
