@@ -23,33 +23,43 @@ program
 
     import numpy as np
     import matplotlib.pyplot as plt
-    Am = 4
-    Ac = 9.8
-    fm = 577
-    fc = 5770
-    fs = 57700
+    Am = 4.8
+    Ac = 9.6
+    fm = 387
+    fc = 3870
+    fs = 38700
     kf = 100
     t = np.arange(0, 2/fm, 1/fs)
     m = Am * np.cos(2 * np.pi * fm * t)
     plt.subplot(3, 1, 1)
     plt.plot(t, m)
+    plt.title("Message Signal")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
     c = Ac * np.cos(2 * np.pi * fc * t)
     plt.subplot(3, 1, 2)
-    plt.plot(t, c)
+    plt.plot(t, c, color='r')
+    plt.title("Carrier Signal")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
     integral_m = np.cumsum(m) / fs
     s = Ac * np.cos(2 * np.pi * fc * t + 2 * np.pi * kf * integral_m)
     plt.subplot(3, 1, 3)
-    plt.plot(t, s)
+    plt.plot(t, s, color='g')
+    plt.title("FM Signal")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
     plt.tight_layout()
     plt.show()
 
 output 
 
-<img width="782" height="586" alt="image" src="https://github.com/user-attachments/assets/fbde92e6-e0d5-476b-9c18-e44d1aaee0d3" />
+<img width="630" height="469" alt="fm using python" src="https://github.com/user-attachments/assets/582cbf39-1188-4f75-a03e-95c0f709c919" />
 
-calculate 
-
-![WhatsApp Image 2025-11-05 at 21 42 11_1807ecb6](https://github.com/user-attachments/assets/ddf6c0d1-78e6-4aa0-8291-2db8e51a837c)
+calculation
 
 Result 
    The message signal, carrier signal, and frequency modulated (FM) signal will be displayed in separate plots. The modulated signal will show frequency variations corresponding to the amplitude of the message signal.
